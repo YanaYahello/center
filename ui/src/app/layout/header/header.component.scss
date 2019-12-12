@@ -1,0 +1,19 @@
+@import '~src/assets/styles/utils/_variables';
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    color: $primary;
+    li:hover{
+        cursor: pointer;
+    }
+}
+
+.header {
+    padding: 30px;
+    background-color: $light;
+}
+
+button{
+    margin-left: 5px;
+}

@@ -1,0 +1,14 @@
+@import '~src/assets/styles/utils/_variables';
+
+.footer{
+    background-color: $light;
+    text-align: center;
+    padding: 30px;
+}
+
+ul{
+    color: $primary;
+    li:hover{
+        cursor: pointer;
+    }
+}
