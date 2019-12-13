@@ -12,6 +12,9 @@ ul{
 .header {
     padding: 30px;
     background-color: $light;
+    .logo{
+        color: $red;
+    }
 }
 
 button{

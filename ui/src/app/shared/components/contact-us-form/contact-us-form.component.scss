@@ -1,0 +1,16 @@
+@import '~src/assets/styles/utils/_variables';
+
+.form-wrapper {
+    width: 450px;
+    height: 550px;
+    padding: 20px;
+    background-color: $second;
+    border-radius: 10%;
+}
+
+.contact-us-form {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}

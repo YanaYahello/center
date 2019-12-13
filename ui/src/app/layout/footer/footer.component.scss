@@ -1,14 +1,25 @@
 @import '~src/assets/styles/utils/_variables';
 
-.footer{
+.footer {
     background-color: $light;
     text-align: center;
     padding: 30px;
 }
 
-ul{
+ul {
     color: $primary;
-    li:hover{
+
+    li:hover {
         cursor: pointer;
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        color: $primary;
+        text-decoration: none;
     }
 }
