@@ -3,7 +3,9 @@
 ul{
     display: flex;
     justify-content: space-between;
-    color: $primary;
+    color: $light;
+    font-weight: bold;
+    font-size: 1.5em;
     li:hover{
         cursor: pointer;
     }
@@ -11,7 +13,6 @@ ul{
 
 .header {
     padding: 30px;
-    background-color: $light;
     .logo{
         color: $red;
     }
