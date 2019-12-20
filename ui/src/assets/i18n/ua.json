@@ -1,0 +1,23 @@
+{
+  "HOME": {
+    "TITLE": "Наша клініка",
+    "TEXT": "TEXT IN  UKRAINE"
+  },
+  "LINKS": {
+    "ABOUT-US": "something about us",
+    "OUR_TEAM": "something about our team"
+  },
+  "FORM": {
+    "FIRST": "Ім'я",
+    "LAST": "Прізвище",
+    "EMAIL": "Електронна адреса",
+    "QUESTION": "Питання",
+    "SEND": "Надіслати"
+  },
+  "ERROR_MSG": {
+    "REQUIRED": "Це поле обов'язкове для заповнення!",
+    "MIN_LENGTH": "Це поле має містити не менше 2 символів!",
+    "MAX_LENGTH": "це поле має містити не иенше 15 символів!",
+    "QUESTION": "Це поле має бути заповнено в форматі: somename@somename.com"
+  }
+}

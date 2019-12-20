@@ -4,7 +4,7 @@ import { OurTeamPageComponent } from './our-team-page.component';
 
 const routes: Routes = [
     {
-        path: '',
+        path     : '',
         component: OurTeamPageComponent
     }
 ];

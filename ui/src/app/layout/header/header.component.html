@@ -1,17 +1,16 @@
 <div class="header container-fluid">
     <div class="container">
-    <div class="row">
-        <div class="logo col-lg-2 col-sm-12">
-            <img src="../../../assets/images/logo.png" alt="logo">
-           OOO &laquo;МЕД-КОР&raquo;
+        <div class="row">
+            <div class="logo col-lg-2 col-sm-12">
+                <a routerLink="">OOO &laquo;МЕД-КОР&raquo;</a>
+            </div>
+            <div class="col-lg-2 col-sm-12">
+                <button mat-mini-fab (click)="useLanguage('ru')">RU</button>
+                <button mat-mini-fab (click)="useLanguage('ua')">UA</button>
+            </div>
+            <ul class="col-lg-8 col-sm-12">
+                <li *ngFor="let link of links" [routerLink]="link.path"><a>{{link.name}}</a></li>
+            </ul>
         </div>
-        <div class="col-lg-2 col-sm-12">
-            <button mat-mini-fab (click)="useLanguage('ru')">RU</button>
-            <button mat-mini-fab (click)="useLanguage('ua')">UA</button>
-        </div>
-        <ul class="col-lg-8 col-sm-12">
-            <li *ngFor="let link of links" [routerLink]="link.path"><a>{{link.name}}</a></li>
-        </ul>
-    </div>
     </div>
 </div>

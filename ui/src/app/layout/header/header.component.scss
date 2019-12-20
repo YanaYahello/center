@@ -1,22 +1,25 @@
-@import '~src/assets/styles/utils/_variables';
+@import '~assets/styles/utils/variables';
 
-ul{
+ul {
     display: flex;
     justify-content: space-between;
-    color: $primary;
-    li:hover{
+    color: $white;
+    font-weight: bold;
+    font-size: 20px;
+
+    li:hover {
         cursor: pointer;
     }
 }
 
 .header {
-    padding: 30px;
-    background-color: $light;
-    .logo{
+    padding: 50px;
+
+    .logo {
         color: $red;
     }
 }
 
-button{
+button {
     margin-left: 5px;
 }

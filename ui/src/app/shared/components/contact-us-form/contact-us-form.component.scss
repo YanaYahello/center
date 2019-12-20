@@ -1,10 +1,10 @@
-@import '~src/assets/styles/utils/_variables';
+@import '~assets/styles/utils/variables';
 
 .form-wrapper {
     width: 450px;
     height: 550px;
     padding: 20px;
-    background-color: $second;
+    background-color: $form-color;
     border-radius: 10%;
 }
 
@@ -13,4 +13,9 @@
     height: 500px;
     display: flex;
     flex-direction: column;
+}
+
+mat-form-field {
+    font-weight: bold;
+    margin: 15px;
 }
