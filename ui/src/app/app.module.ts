@@ -13,6 +13,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MainPageComponent } from './main-page/main-page.component';
+import { LoginFormComponent } from '@app/shared/components/login-form/login-form.component';
 
 @NgModule({
     declarations: [
@@ -36,6 +37,9 @@ import { MainPageComponent } from './main-page/main-page.component';
         }),
         HttpClientModule,
         SharedModule
+    ],
+    entryComponents: [
+        LoginFormComponent
     ],
     providers   : [],
     bootstrap   : [AppComponent]

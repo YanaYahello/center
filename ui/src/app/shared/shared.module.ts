@@ -4,20 +4,28 @@ import { MessageComponent } from './message/message.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { TranslateModule } from '@ngx-translate/core';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
-    declarations: [MessageComponent],
+    declarations: [MessageComponent, LoginFormComponent],
     exports     : [
         MessageComponent,
         MatButtonModule,
         MatInputModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatDialogModule
     ],
-    imports     : [
+    imports: [
         CommonModule,
         MatButtonModule,
         MatInputModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        TranslateModule,
+        MatDialogModule,
+        MatIconModule
     ]
 })
 export class SharedModule {

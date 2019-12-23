@@ -41,7 +41,6 @@ export class ContactUsFormComponent implements OnInit {
             email: this.contactUsForm.controls.email.value,
             question: this.contactUsForm.controls.question.value
         };
-        console.log(userData);
         this.sendMailService.sendEmail('http://localhost:3000/send-email', userData).subscribe(
             () => {
                 console.log('email has sent', this.contactUsForm.value);

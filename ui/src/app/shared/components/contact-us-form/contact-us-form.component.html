@@ -7,7 +7,7 @@
             <mat-error
                 *ngIf="contactUsForm.controls.firstName.invalid && (contactUsForm.controls.firstName.touched || contactUsForm.controls.firstName.dirty)">
                 <mat-error *ngIf="contactUsForm.controls.firstName.errors.required">
-                    {{required}}
+                    {{'ERROR_MSG.REQUIRED'| translate}}
                 </mat-error>
                 <mat-error *ngIf="contactUsForm.controls.firstName.errors.minlength">
                     {{minlength}}
@@ -24,13 +24,13 @@
             <mat-error
                 *ngIf="contactUsForm.controls.lastName.invalid && (contactUsForm.controls.lastName.touched || contactUsForm.controls.lastName.dirty)">
                 <mat-error *ngIf="contactUsForm.controls.lastName.errors.required">
-                    {{required}}
+                    {{'ERROR_MSG.REQUIRED'| translate}}
                 </mat-error>
                 <mat-error *ngIf="contactUsForm.controls.lastName.errors.minlength">
-                    {{minlength}}
+                    {{'ERROR_MSG.MINLENGTH'| translate}}
                 </mat-error>
                 <mat-error *ngIf="contactUsForm.controls.lastName.errors.maxlength">
-                    {{maxlength}}
+                    {{'ERROR_MSG.MAXLENGTH'| translate}}
                 </mat-error>
             </mat-error>
         </mat-form-field>
@@ -41,16 +41,16 @@
             <mat-error
                 *ngIf="contactUsForm.controls.email.invalid && (contactUsForm.controls.email.touched || contactUsForm.controls.email.dirty)">
                 <mat-error *ngIf="contactUsForm.controls.email.errors.required">
-                    {{required}}
+                    {{'ERROR_MSG.REQUIRED'| translate}}
                 </mat-error>
                 <mat-error *ngIf="contactUsForm.controls.email.errors.minlength">
-                    {{minlength}}
+                    {{'ERROR_MSG.MINLENGTH'| translate}}
                 </mat-error>
                 <mat-error *ngIf="contactUsForm.controls.email.errors.maxlength">
-                    {{maxlength}}
+                    {{'ERROR_MSG.MAXLENGTH'| translate}}
                 </mat-error>
                 <mat-error *ngIf="contactUsForm.controls.email.errors.email">
-                    {{email}}
+                    {{'ERROR_MSG.EMAIL'| translate}}
                 </mat-error>
             </mat-error>
         </mat-form-field>
@@ -61,13 +61,13 @@
             <mat-error
                 *ngIf="contactUsForm.controls.question.invalid && (contactUsForm.controls.question.touched || contactUsForm.controls.question.dirty)">
                 <mat-error *ngIf="contactUsForm.controls.question.errors.required">
-                    {{required}}
+                    {{'ERROR_MSG.REQUIRED'| translate}}
                 </mat-error>
                 <mat-error *ngIf="contactUsForm.controls.question.errors.minlength">
-                    {{minlength}}
+                    {{'ERROR_MSG.MINLENGTH'| translate}}
                 </mat-error>
                 <mat-error *ngIf="contactUsForm.controls.question.errors.maxlength">
-                    {{maxlength}}
+                    {{'ERROR_MSG.MAXLENGTH'| translate}}
                 </mat-error>
             </mat-error>
         </mat-form-field>
