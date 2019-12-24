@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ERROR_MESSAGES } from '@app/common/constants/errorMessages';
 import { SendEmailService } from '@services/send-email.service';
 
 @Component({
@@ -10,10 +9,6 @@ import { SendEmailService } from '@services/send-email.service';
 })
 export class ContactUsFormComponent implements OnInit {
     contactUsForm: FormGroup;
-    required  = ERROR_MESSAGES[0].required;
-    minlength = ERROR_MESSAGES[1].minlength;
-    maxlength = ERROR_MESSAGES[2].maxlength;
-    email     = ERROR_MESSAGES[3].email;
 
     constructor(private formBuilder: FormBuilder,
                 private sendMailService: SendEmailService) { }
@@ -43,7 +38,7 @@ export class ContactUsFormComponent implements OnInit {
         };
         this.sendMailService.sendEmail('http://localhost:3000/send-email', userData).subscribe(
             () => {
-                console.log('email has sent', this.contactUsForm.value);
+                console.log('email has sent');
             },
             err => console.log(err)
         );

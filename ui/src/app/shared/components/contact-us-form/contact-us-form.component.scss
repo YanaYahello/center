@@ -1,16 +1,14 @@
 @import '~assets/styles/utils/variables';
 
 .form-wrapper {
-    width: 450px;
-    height: 550px;
+    max-width: 450px;
+    max-height: 550px;
     padding: 20px;
     background-color: $form-color;
     border-radius: 10%;
 }
 
 .contact-us-form {
-    width: 400px;
-    height: 500px;
     display: flex;
     flex-direction: column;
 }
@@ -18,4 +16,7 @@
 mat-form-field {
     font-weight: bold;
     margin: 15px;
+}
+mat-error{
+    color: $error;
 }

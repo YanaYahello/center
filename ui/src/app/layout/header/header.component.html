@@ -11,9 +11,6 @@
             <ul class="col-lg-5 col-sm-12">
                 <li *ngFor="let link of links" [routerLink]="link.path"><a>{{link.name}}</a></li>
             </ul>
-            <div class="col-lg-3">
-                <button mat-flat-button (click)="openRegistrationForm()">Регистрация</button>
-            </div>
         </div>
     </div>
 </div>
