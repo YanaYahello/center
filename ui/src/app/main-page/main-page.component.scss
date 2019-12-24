@@ -10,9 +10,13 @@ h1{
 
 .benefits {
     height: 300px;
-    margin-top: 50px;
+    display: flex;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
-    color: $text-input;
+    color: $black;
+    margin-bottom: 100px;
+    div{
+        align-self: flex-end;
+    }
 }
