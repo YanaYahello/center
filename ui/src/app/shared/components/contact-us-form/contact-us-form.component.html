@@ -1,4 +1,5 @@
 <div class="form-wrapper">
+<<<<<<< HEAD
     <form class="contact-us-form" [formGroup]="contactUsForm" (ngSubmit)="onSubmit()">
         <mat-form-field>
             <label>
@@ -70,4 +71,43 @@
         </mat-form-field>
         <button [disabled]="contactUsForm.invalid" mat-raised-button>Отправить</button>
     </form>
+=======
+<form class="contact-us-form" [formGroup]="contactUsForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <label>
+            <input matInput placeholder="Имя" formControlName="firstName">
+        </label>
+        <mat-error>
+                Пожалуйста введите свое имя.
+            </mat-error>
+            <mat-error *ngIf="contactUsForm.hasError('required')">
+                 Имя <strong>обязательно</strong>
+            </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <label>
+            <input matInput placeholder="Фамилия" formControlName="lastName">
+        </label>
+        <mat-error>
+                Пожалуйста введите свою фамилию.
+            </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <label>
+            <input matInput placeholder="Email" formControlName="email">
+        </label>
+        <mat-error>
+                 Это поле обязательно для заполнения!
+            </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <label>
+            <textarea matInput placeholder="Ваш вопрос" formControlName="question"></textarea>
+        </label>
+        <mat-error>
+                Это поле обязательно для заполнения!
+            </mat-error>
+    </mat-form-field>
+</form>
+>>>>>>> created form added google cart
 </div>
