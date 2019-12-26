@@ -2,16 +2,20 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-sm-12">
-                <a routerLink="">LOGO</a></div>
+                <a routerLink="">
+                    <img src="../../../assets/images/logo.png" alt="logo">
+                </a>
+            </div>
             <ul class="col-lg-12 col-sm-12">
                 <li *ngFor="let link of links" [routerLink]="link.path">{{link.name}}</li>
             </ul>
             <div class="contacts col-lg-12 col-sm-12">
-                ООО &laquo;МЕД-КОР&raquo;
                 <a href="tel:+380487700448">+380487700448</a>
                 <a href="tel:+380949954448">+380949954448</a>
                 <a href="tel:+380689380492">+380689380492</a>
-                г.Одесса, б-р Французский, дом 22, корпус 3.
+                <a href=""><img src="../../../assets/images/icons/facebook.png" alt="facebook"></a>
+                <div>{{'CONTACTS.CITY' | translate}}</div>
+                <div>{{'CONTACTS.STREET' | translate}}</div>
             </div>
         </div>
     </div>

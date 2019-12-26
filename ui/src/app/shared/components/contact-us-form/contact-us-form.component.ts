@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SendEmailService } from '@services/send-email.service';
 
@@ -9,15 +9,21 @@ import { SendEmailService } from '@services/send-email.service';
 })
 export class ContactUsFormComponent implements OnInit {
     contactUsForm: FormGroup;
+    @Input() callForm: boolean;
+    @Output() closeForm = new EventEmitter();
 
     constructor(private formBuilder: FormBuilder,
                 private sendMailService: SendEmailService) { }
 
     ngOnInit() {
-        this.createForm();
+        if (this.callForm) {
+            this.createCallForm();
+        } else {
+            this.createContactForm();
+        }
     }
 
-    createForm() {
+    createContactForm() {
         this.contactUsForm = this.formBuilder.group({
             firstName: ['', [Validators.required, Validators.maxLength(15), Validators.minLength(2)]],
             lastName : ['', [Validators.required, Validators.maxLength(15), Validators.minLength(2)]],
@@ -26,16 +32,35 @@ export class ContactUsFormComponent implements OnInit {
         });
     }
 
+    createCallForm() {
+        this.contactUsForm = this.formBuilder.group({
+            firstName: ['', [Validators.required, Validators.maxLength(15), Validators.minLength(2)]],
+            phone    : ['', [Validators.required, Validators.maxLength(15), Validators.minLength(2)]]
+        });
+    }
+
+    closedForm(isClosed) {
+        this.closeForm.emit(isClosed);
+    }
+
     onSubmit() {
         if (!this.contactUsForm.valid) {
             return;
         }
-        const userData = {
-            firstName: this.contactUsForm.controls.firstName.value,
-            lastName: this.contactUsForm.controls.lastName.value,
-            email: this.contactUsForm.controls.email.value,
-            question: this.contactUsForm.controls.question.value
-        };
+        let userData;
+        if (this.callForm) {
+            userData = {
+                firstName: this.contactUsForm.controls.firstName.value,
+                phone    : this.contactUsForm.controls.phone.value
+            };
+        } else {
+            userData = {
+                firstName: this.contactUsForm.controls.firstName.value,
+                lastName : this.contactUsForm.controls.lastName.value,
+                email    : this.contactUsForm.controls.email.value,
+                question : this.contactUsForm.controls.question.value
+            };
+        }
         this.sendMailService.sendEmail('http://localhost:3000/send-email', userData).subscribe(
             () => {
                 console.log('email has sent');

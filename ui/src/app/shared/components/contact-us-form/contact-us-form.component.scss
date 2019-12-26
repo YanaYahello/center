@@ -6,6 +6,12 @@
     padding: 20px;
     background-color: $form-color;
     border-radius: 10%;
+    position: relative;
+    img{
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+    }
 }
 
 .contact-us-form {
@@ -20,3 +26,4 @@ mat-form-field {
 mat-error{
     color: $error;
 }
+

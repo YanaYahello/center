@@ -5,19 +5,25 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { PhoneComponent } from './components/phone/phone.component';
+import { ContactUsFormComponent } from '@app/shared/components/contact-us-form/contact-us-form.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
-    declarations: [MessageComponent],
-    exports     : [
+    declarations: [MessageComponent, PhoneComponent, ContactUsFormComponent, CarouselComponent],
+    exports: [
         MessageComponent,
         MatButtonModule,
         MatInputModule,
         ReactiveFormsModule,
+        PhoneComponent,
+        CarouselComponent,
+        ContactUsFormComponent,
         MatDialogModule
     ],
-    imports: [
+    imports     : [
         CommonModule,
         MatButtonModule,
         MatInputModule,

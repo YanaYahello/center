@@ -3,6 +3,7 @@
 .footer {
     text-align: center;
     padding: 30px;
+    background-color: $black;
 }
 
 ul {
@@ -16,9 +17,15 @@ ul {
 .contacts {
     display: flex;
     flex-direction: column;
+    color: $gray;
 
     a {
-        color: $primary;
+        color: $gray;
         text-decoration: none;
+        margin-bottom: 10px;
+        display: block;
+    }
+    div {
+        margin-bottom: 10px;
     }
 }

@@ -1,0 +1,29 @@
+@import "~assets/styles/utils/_variables";
+
+.phone {
+    position: relative;
+    background: $primary;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    img {
+        position: absolute;
+        top: 10%;
+        left: 25%;
+        height: 40px;
+    }
+}
+
+.call-form-block {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+}
+
+.form {
+    position: absolute;
+    top: 50px;
+    left: -200px;
+}

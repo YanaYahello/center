@@ -5,7 +5,8 @@ ul {
     justify-content: space-between;
     color: $white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
+    align-items: center;
 
     li:hover {
         cursor: pointer;
@@ -13,11 +14,28 @@ ul {
 }
 
 .header {
-    padding: 50px;
-
     .logo {
         color: $red;
     }
+}
+
+.upper-header {
+    background-color: $black;
+
+    .container {
+        padding: 5px 0;
+        color: $gray;
+        a {
+            text-decoration: none;
+            margin-right: 10px;
+            color: $gray;
+        }
+    }
+}
+
+.nav-header{
+    background-image: $primary;
+    padding: 5px 0;
 }
 
 button {

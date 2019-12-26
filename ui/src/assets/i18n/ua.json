@@ -4,8 +4,9 @@
     "TEXT": "TEXT IN  UKRAINE"
   },
   "LINKS": {
-    "ABOUT-US": "something about us",
-    "OUR_TEAM": "something about our team"
+    "ABOUT-US": "Про нас",
+    "OUR_TEAM": "Наша команда",
+    "PRICE_LIST": "Прайс лист"
   },
   "FORM": {
     "FIRST": "Ім'я",
@@ -14,7 +15,8 @@
     "QUESTION": "Питання",
     "SEND": "Надіслати",
     "PASSWORD": "Введіть пароль",
-    "CONFIRM_PASSWORD": "Підтвердіть пароль!"
+    "CONFIRM_PASSWORD": "Підтвердіть пароль!",
+    "PHONE": "Ваш номер телефону"
   },
   "ERROR_MSG": {
     "REQUIRED": "Це поле обов'язкове для заповнення!",
@@ -27,5 +29,13 @@
     "FIRST": "Індивиідуальний підхід",
     "SECOND": "Досвідчені спеціалісти",
     "THIRD": "Сучасна діагностика"
+  },
+  "CONTACTS":{
+    "CITY": "м.Одеса",
+    "STREET": "б-р Французький дім 22, корпус 3.",
+    "PHONES": "Наші телефони"
+  },
+  "MAIN_PAGE": {
+    "WHO_WE_ARE":"Хто ми"
   }
 }

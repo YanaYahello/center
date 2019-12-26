@@ -23,6 +23,7 @@
     "@angular/router": "~8.1.1",
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
+    "angular2-carousel": "^1.0.17",
     "body-parser": "^1.19.0",
     "bootstrap-4-grid": "^3.2.0",
     "cors": "^2.8.5",

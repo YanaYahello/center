@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { GetDataService } from '@services/get-data.service';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
@@ -10,8 +9,8 @@ import { filter } from 'rxjs/operators';
     styleUrls  : ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    show = false;
-    backgroundImg;
+    show     = false;
+    isOpen   = false;
 
     constructor(private translate: TranslateService,
                 private router: Router) {
@@ -24,18 +23,12 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         this.router.events
             .pipe(filter(event => event instanceof NavigationEnd))
-            .subscribe((nav: NavigationEnd) => {
-                switch (nav.url) {
-                    case '/':
-                        this.backgroundImg = 'home-background-img';
-                        break;
-                    case '/our-team':
-                        this.backgroundImg = 'our-team-background-img';
-                        break;
-                    default:
-                        this.backgroundImg = '';
-                }
+            .subscribe(() => {
                 window.scrollTo(0, 0);
             });
+    }
+
+    toggleFormForCall() {
+        this.isOpen = !this.isOpen;
     }
 }

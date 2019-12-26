@@ -4,8 +4,9 @@
     "TEXT": "TEXT IN RUSSIAN"
   },
   "LINKS": {
-    "ABOUT_US": "something about us",
-    "OUR_TEAM": "something about our team"
+    "ABOUT_US": "Про нас",
+    "OUR_TEAM": "Наша команда",
+    "PRICE_LIST": "Прайс лист"
   },
   "FORM": {
     "FIRST": "Имя",
@@ -14,7 +15,8 @@
     "QUESTION": "Вопрос",
     "SEND": "Отправить",
     "PASSWORD": "Введите пароль",
-    "CONFIRM_PASSWORD": "Подтвердите пароль"
+    "CONFIRM_PASSWORD": "Подтвердите пароль",
+    "PHONE": "Ваш номер телефона"
   },
   "ERROR_MSG": {
     "REQUIRED": "Это поле обязательно для заполнения",
@@ -28,5 +30,13 @@
     "FIRST": "Индивидуальный подход",
     "SECOND": "Опытные специалисты",
     "THIRD": "Современная диагностика"
+  },
+  "CONTACTS": {
+    "CITY": "г.Одесса",
+    "STREET": "б-р Французский, дом 22, корпус 3.",
+    "PHONES": "Наши телефоны"
+  },
+  "MAIN_PAGE": {
+    "WHO_WE_ARE":"Кто мы"
   }
 }

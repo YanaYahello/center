@@ -10,12 +10,10 @@ export class GetDataService {
     }
 
     getTranslateLang(lang) {
-        console.log(lang);
         this.language = lang;
     }
 
     getLang() {
-        console.log(this.language);
         return this.language;
     }
 }
