@@ -7,13 +7,23 @@
                 </a>
             </div>
             <ul class="col-lg-12 col-sm-12">
-                <li *ngFor="let link of links" [routerLink]="link.path">{{link.name}}</li>
+                <li *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active-link">{{'LINKS'+ link.name | translate}}</li>
             </ul>
             <div class="contacts col-lg-12 col-sm-12">
                 <a href="tel:+380487700448">+380487700448</a>
                 <a href="tel:+380949954448">+380949954448</a>
                 <a href="tel:+380689380492">+380689380492</a>
-                <a href=""><img src="../../../assets/images/icons/facebook.png" alt="facebook"></a>
+                <div class="social">
+                <a href="">
+                    <img src="../../../assets/images/icons/facebook.png" alt="facebook">
+                </a>
+                <a href="https://instagram.com/clinic_medcor?igshid=1fhruwb3xo540">
+                    <img src="../../../assets/images/icons/instagram.png" alt="instagarm">
+                </a>
+                <a href="https://m.2gis.ua/odessa/firm/70000001032881074?m=30.757211%2C46.454478%2F18">
+                    <img src="http://api.2gis.ru/assets/frontend/api/css/img/logo.svg" alt="2gis">
+                </a>
+                </div>
                 <div>{{'CONTACTS.CITY' | translate}}</div>
                 <div>{{'CONTACTS.STREET' | translate}}</div>
             </div>

@@ -6,7 +6,8 @@
   "LINKS": {
     "ABOUT_US": "Про нас",
     "OUR_TEAM": "Наша команда",
-    "PRICE_LIST": "Прайс лист"
+    "PRICE_LIST": "Прайс лист",
+    "STOCKS": "Акции"
   },
   "FORM": {
     "FIRST": "Имя",

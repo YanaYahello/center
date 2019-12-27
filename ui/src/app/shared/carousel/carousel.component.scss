@@ -1,6 +1,5 @@
 @import "~assets/styles/utils/_variables.scss";
 
-
 input {
     position: absolute;
     opacity: 0;
@@ -57,7 +56,7 @@ input:checked + label + .slide {
     background-image: url(~assets/images/home-page.png);
 }
 .bg2{
-    background-image: url(~assets/images/home-page.png);
+    background-image: url(~assets/images/our-team.png);
 }
 .bg3{
     background-image: url(~assets/images/home-page.png);

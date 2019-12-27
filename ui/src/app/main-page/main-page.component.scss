@@ -1,16 +1,7 @@
 @import "~assets/styles/utils/_variables";
 
-h1 {
-    color: $white;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 100px;
-    padding-top: 30px;
-}
-
 .home-img {
-   width: 100vw;
+    width: 100vw;
     display: block;
 }
 
@@ -25,7 +16,16 @@ h1 {
 }
 
 .under-img-block {
- background-image: $primary;
+    background-image: $primary;
+
+    .title {
+        color: $white;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 100px;
+        padding-top: 30px;
+    }
 }
 
 .contact-block {

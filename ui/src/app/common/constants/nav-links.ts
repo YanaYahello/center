@@ -10,5 +10,9 @@ export const NAV_LINKS = [
     {
         name: '.PRICE_LIST',
         path: 'price-list'
+    },
+    {
+        name: '.STOCKS',
+        path: 'stocks'
     }
 ];

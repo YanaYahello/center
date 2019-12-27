@@ -10,9 +10,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { PhoneComponent } from './components/phone/phone.component';
 import { ContactUsFormComponent } from '@app/shared/components/contact-us-form/contact-us-form.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ArrowComponent } from './arrow/arrow.component';
 
 @NgModule({
-    declarations: [MessageComponent, PhoneComponent, ContactUsFormComponent, CarouselComponent],
+    declarations: [MessageComponent, PhoneComponent, ContactUsFormComponent, CarouselComponent, ArrowComponent],
     exports: [
         MessageComponent,
         MatButtonModule,
@@ -20,6 +21,7 @@ import { CarouselComponent } from './carousel/carousel.component';
         ReactiveFormsModule,
         PhoneComponent,
         CarouselComponent,
+        ArrowComponent,
         ContactUsFormComponent,
         MatDialogModule
     ],

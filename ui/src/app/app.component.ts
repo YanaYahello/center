@@ -9,8 +9,8 @@ import { filter } from 'rxjs/operators';
     styleUrls  : ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    show     = false;
-    isOpen   = false;
+    show   = false;
+    isOpen = false;
 
     constructor(private translate: TranslateService,
                 private router: Router) {
@@ -30,5 +30,13 @@ export class AppComponent implements OnInit {
 
     toggleFormForCall() {
         this.isOpen = !this.isOpen;
+    }
+
+    goToTop() {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
 }

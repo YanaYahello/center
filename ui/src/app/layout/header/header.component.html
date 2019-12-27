@@ -10,18 +10,22 @@
     <div class="container-fluid nav-header">
         <div class="container">
             <div class="row">
-                <div class="logo col-lg-2 col-sm-12">
+                <div class="logo col-lg-3 col-sm-2">
                     <a routerLink="">
                         <img src="../../../assets/images/logo.png" alt="logo">
                     </a>
                 </div>
-                <div class="col-lg-2 col-sm-12">
+                <div class="col-lg-4 col-sm-3">
                     <button mat-mini-fab (click)="useLanguage('ru')">RU</button>
                     <button mat-mini-fab (click)="useLanguage('ua')">UA</button>
                 </div>
-                <ul class="col-lg-5 col-sm-12">
-                    <li *ngFor="let link of links" [routerLink]="link.path"><a>{{'LINKS'+ link.name | translate}}</a></li>
-                </ul>
+                <div class="nav col-lg-5 col-sm-12">
+                    <label for="toggle">&#9776;</label>
+                    <input type="checkbox" id="toggle">
+                    <ul class="menu">
+                        <li *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active-link"><a>{{'LINKS'+ link.name | translate}}</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
