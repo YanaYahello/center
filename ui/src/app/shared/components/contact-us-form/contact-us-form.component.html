@@ -89,6 +89,6 @@
                 </mat-error>
             </mat-error>
         </mat-form-field>
-        <button mat-flat-button [disabled]="!contactUsForm.valid">{{'FORM.SEND' | translate}}</button>
+        <button mat-flat-button #submitBtn [disabled]="!contactUsForm.valid">{{'FORM.SEND' | translate}}</button>
     </form>
 </div>

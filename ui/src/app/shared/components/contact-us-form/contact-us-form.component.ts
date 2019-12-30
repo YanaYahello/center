@@ -1,6 +1,8 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SendEmailService } from '@services/send-email.service';
+import { NotificationService } from '@services/notification.service';
+import { environment } from '../../../../environments/environment';
 
 @Component({
     selector   : 'app-contact-us-form',
@@ -9,11 +11,20 @@ import { SendEmailService } from '@services/send-email.service';
 })
 export class ContactUsFormComponent implements OnInit {
     contactUsForm: FormGroup;
+    sendEmailUrl            = environment.URL;
     @Input() callForm: boolean;
-    @Output() closeForm = new EventEmitter();
+    @Output() closeFromForm = new EventEmitter();
+    @ViewChild(
+        'submitBtn',
+        {
+            read  : ElementRef,
+            static: false
+        }
+    ) private submitBtn: ElementRef;
 
     constructor(private formBuilder: FormBuilder,
-                private sendMailService: SendEmailService) { }
+                private sendMailService: SendEmailService,
+                private notificationService: NotificationService) { }
 
     ngOnInit() {
         if (this.callForm) {
@@ -27,7 +38,7 @@ export class ContactUsFormComponent implements OnInit {
         this.contactUsForm = this.formBuilder.group({
             firstName: ['', [Validators.required, Validators.maxLength(15), Validators.minLength(2)]],
             lastName : ['', [Validators.required, Validators.maxLength(15), Validators.minLength(2)]],
-            email    : ['', [Validators.required, Validators.maxLength(20), Validators.minLength(2), Validators.email]],
+            email    : ['', [Validators.required, Validators.maxLength(30), Validators.minLength(2), Validators.email]],
             question : ['', [Validators.required, Validators.maxLength(150)]]
         });
     }
@@ -40,7 +51,7 @@ export class ContactUsFormComponent implements OnInit {
     }
 
     closedForm(isClosed) {
-        this.closeForm.emit(isClosed);
+        this.closeFromForm.emit(isClosed);
     }
 
     onSubmit() {
@@ -61,15 +72,17 @@ export class ContactUsFormComponent implements OnInit {
                 question : this.contactUsForm.controls.question.value
             };
         }
-        this.sendMailService.sendEmail('http://localhost:3000/send-email', userData).subscribe(
+        this.sendMailService.sendEmail(this.sendEmailUrl, userData).subscribe(
             () => {
-                console.log('email has sent');
+                this.notificationService.success('.SUCCESS');
             },
-            err => console.log(err)
+            err => this.notificationService.error('.ERROR' + err)
         );
         this.contactUsForm.reset();
         Object.keys(this.contactUsForm.controls).forEach(key => {
             this.contactUsForm.controls[key].setErrors(null);
         });
+        this.submitBtn.nativeElement.setAttribute('disabled', 'false');
+        this.closedForm(true);
     }
 }

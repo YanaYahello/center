@@ -1,7 +1,7 @@
 @import "~assets/styles/utils/_variables";
 
 .phone {
-    position: relative;
+    position: fixed;
     background: $primary;
     width: 50px;
     height: 50px;

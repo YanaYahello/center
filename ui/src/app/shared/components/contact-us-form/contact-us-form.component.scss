@@ -7,7 +7,8 @@
     background-color: $form-color;
     border-radius: 10%;
     position: relative;
-    img{
+
+    img {
         position: absolute;
         right: 20px;
         cursor: pointer;
@@ -23,7 +24,15 @@ mat-form-field {
     font-weight: bold;
     margin: 15px;
 }
-mat-error{
+
+mat-error {
     color: $error;
 }
 
+@media screen and (max-width: 500px) {
+    .form-wrapper {
+        min-height: 450px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}

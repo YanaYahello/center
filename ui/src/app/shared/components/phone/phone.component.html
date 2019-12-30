@@ -3,6 +3,6 @@
     <img src="../../../../assets/images/icons/phone.png" alt="phone">
 </div>
 <div *ngIf="isOpen" class="form">
-    <app-contact-us-form  [callForm]="isOpen"  (closeForm)="closedForm()"></app-contact-us-form>
+    <app-contact-us-form  [callForm]="isOpen"  (closeFromForm)="closedForm($event)"></app-contact-us-form>
 </div>
 </div>

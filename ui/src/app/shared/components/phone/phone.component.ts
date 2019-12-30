@@ -14,7 +14,7 @@ export class PhoneComponent implements OnInit {
     ngOnInit() {
     }
 
-    closedForm() {
-        this.isOpen = false;
+    closedForm(event) {
+        this.isOpen = !event;
     }
 }

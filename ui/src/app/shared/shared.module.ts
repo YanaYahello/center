@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { PhoneComponent } from './components/phone/phone.component';
 import { ContactUsFormComponent } from '@app/shared/components/contact-us-form/contact-us-form.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import { ArrowComponent } from './arrow/arrow.component';
+import { ArrowComponent } from './components/arrow/arrow.component';
 
 @NgModule({
     declarations: [MessageComponent, PhoneComponent, ContactUsFormComponent, CarouselComponent, ArrowComponent],

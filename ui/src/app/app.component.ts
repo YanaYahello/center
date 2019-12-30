@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -9,8 +9,9 @@ import { filter } from 'rxjs/operators';
     styleUrls  : ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    show   = false;
-    isOpen = false;
+    isOpen     = false;
+    isShowArrow: boolean;
+    scrollDown = 150;
 
     constructor(private translate: TranslateService,
                 private router: Router) {
@@ -18,6 +19,10 @@ export class AppComponent implements OnInit {
         translate.setDefaultLang('ru');
         const browserLang = translate.getBrowserLang();
         translate.use(browserLang.match(/ua|ru/) ? browserLang : 'ru');
+    }
+
+    @HostListener('window:scroll') showArrow() {
+        this.isShowArrow = window.pageYOffset > this.scrollDown;
     }
 
     ngOnInit() {
@@ -28,14 +33,16 @@ export class AppComponent implements OnInit {
             });
     }
 
-    toggleFormForCall() {
-        this.isOpen = !this.isOpen;
+    toggleFormForCall(event) {
+        if (event.target.tagName === 'IMG') {
+            this.isOpen = !this.isOpen;
+        }
     }
 
     goToTop() {
         window.scrollTo({
-            top: 0,
-            left: 0,
+            top     : 0,
+            left    : 0,
             behavior: 'smooth'
         });
     }

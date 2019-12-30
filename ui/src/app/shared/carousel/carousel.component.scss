@@ -1,9 +1,15 @@
 @import "~assets/styles/utils/_variables.scss";
 
+.container-fluid {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
 input {
     position: absolute;
     opacity: 0;
-    margin-top: 95vh;
+    margin-top: 85vh;
     cursor: pointer;
 }
 
@@ -14,17 +20,17 @@ label {
     border: solid 2px $white;
     border-radius: 999px;
     background-color: transparent;
-    margin: 95vh 6px 0 6px;
+    margin: 85vh 6px 0 6px;
     z-index: 2;
     cursor: pointer;
     transition-duration: .4s;
 }
 
-input:checked + label{
+input:checked + label {
     background-color: $white;
 }
 
-input:focus + label{
+input:focus + label {
     box-shadow: 0 0 0 2px $form-color, 0 0 18px $white;
 }
 
@@ -33,8 +39,8 @@ input:focus + label{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
     z-index: -1;
@@ -52,18 +58,44 @@ input:checked + label + .slide {
     opacity: 1;
 }
 
-.bg1{
+.bg1 {
     background-image: url(~assets/images/home-page.png);
 }
-.bg2{
+
+.bg2 {
     background-image: url(~assets/images/our-team.png);
 }
-.bg3{
+
+.bg3 {
     background-image: url(~assets/images/home-page.png);
 }
-.bg4{
+
+.bg4 {
     background-image: url(~assets/images/home-page.png);
 }
-.bg5{
+
+.bg5 {
     background-image: url(~assets/images/home-page.png);
+}
+
+@media screen and (max-width: 500px) {
+    .bg1 {
+        background-image: url(~assets/images/home-page.png);
+    }
+
+    .bg2 {
+        background-image: url(~assets/images/our-team.png);
+    }
+
+    .bg3 {
+        background-image: url(~assets/images/home-page.png);
+    }
+
+    .bg4 {
+        background-image: url(~assets/images/home-page.png);
+    }
+
+    .bg5 {
+        background-image: url(~assets/images/home-page.png);
+    }
 }

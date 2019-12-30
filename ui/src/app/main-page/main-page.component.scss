@@ -32,3 +32,9 @@
     background: $gray;
     padding: 30px;
 }
+
+@media screen and (max-width: 500px){
+    iframe{
+        margin-bottom: 20px;
+    }
+}
