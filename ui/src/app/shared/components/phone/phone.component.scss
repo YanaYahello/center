@@ -2,6 +2,7 @@
 
 .phone {
     position: fixed;
+    right: 50px;
     background: $primary;
     width: 50px;
     height: 50px;
@@ -26,4 +27,13 @@
     position: absolute;
     top: 50px;
     left: -200px;
+}
+
+@media screen and (max-width: 500px){
+    .phone {
+        right: 0;
+    }
+    .call-form-block {
+        top: 300px;
+    }
 }

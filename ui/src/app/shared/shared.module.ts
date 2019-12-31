@@ -11,6 +11,7 @@ import { PhoneComponent } from './components/phone/phone.component';
 import { ContactUsFormComponent } from '@app/shared/components/contact-us-form/contact-us-form.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ArrowComponent } from './components/arrow/arrow.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
     declarations: [MessageComponent, PhoneComponent, ContactUsFormComponent, CarouselComponent, ArrowComponent],
@@ -23,7 +24,8 @@ import { ArrowComponent } from './components/arrow/arrow.component';
         CarouselComponent,
         ArrowComponent,
         ContactUsFormComponent,
-        MatDialogModule
+        MatDialogModule,
+        NgxPaginationModule
     ],
     imports     : [
         CommonModule,
@@ -32,7 +34,8 @@ import { ArrowComponent } from './components/arrow/arrow.component';
         ReactiveFormsModule,
         TranslateModule,
         MatDialogModule,
-        MatIconModule
+        MatIconModule,
+        NgxPaginationModule
     ]
 })
 export class SharedModule {

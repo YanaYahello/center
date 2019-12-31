@@ -36,7 +36,7 @@ input:focus + label {
 
 .slide {
     position: absolute;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
@@ -47,6 +47,10 @@ input:focus + label {
     transform: translateX(-100%);
     transition-duration: .4s;
     opacity: 1;
+
+    img {
+        width: 100vw;
+    }
 }
 
 input:checked ~ .slide {
@@ -58,44 +62,8 @@ input:checked + label + .slide {
     opacity: 1;
 }
 
-.bg1 {
-    background-image: url(~assets/images/home-page.png);
-}
-
-.bg2 {
-    background-image: url(~assets/images/our-team.png);
-}
-
-.bg3 {
-    background-image: url(~assets/images/home-page.png);
-}
-
-.bg4 {
-    background-image: url(~assets/images/home-page.png);
-}
-
-.bg5 {
-    background-image: url(~assets/images/home-page.png);
-}
-
 @media screen and (max-width: 500px) {
-    .bg1 {
-        background-image: url(~assets/images/home-page.png);
-    }
-
-    .bg2 {
-        background-image: url(~assets/images/our-team.png);
-    }
-
-    .bg3 {
-        background-image: url(~assets/images/home-page.png);
-    }
-
-    .bg4 {
-        background-image: url(~assets/images/home-page.png);
-    }
-
-    .bg5 {
-        background-image: url(~assets/images/home-page.png);
+    input, label {
+        margin-top: 25vh;
     }
 }
