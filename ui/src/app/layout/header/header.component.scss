@@ -1,27 +1,25 @@
-@import '~src/assets/styles/utils/_variables';
+@import '~assets/styles/utils/variables';
 
-ul{
+ul {
     display: flex;
     justify-content: space-between;
-    color: $light;
+    color: $white;
     font-weight: bold;
-    font-size: 1.5em;
-    li:hover{
+    font-size: 20px;
+
+    li:hover {
         cursor: pointer;
     }
 }
 
 .header {
-    padding: 30px;
-<<<<<<< HEAD
-=======
-    background-color: $light;
->>>>>>> created form added google cart
-    .logo{
+    padding: 50px;
+
+    .logo {
         color: $red;
     }
 }
 
-button{
+button {
     margin-left: 5px;
 }

@@ -4,7 +4,7 @@ import { AboutUsPageComponent } from './about-us-page.component';
 
 const routes: Routes = [
     {
-        path: '',
+        path     : '',
         component: AboutUsPageComponent
     }
 ];

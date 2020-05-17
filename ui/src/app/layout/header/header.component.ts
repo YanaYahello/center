@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NAV_LINKS } from '../../common/constants/nav-links';
-import { GetDataService } from '../../common/services/get-data.service';
+import { NAV_LINKS } from '@app/common/constants/nav-links';
+import { GetDataService } from '@services/get-data.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector   : 'app-header',
@@ -8,14 +9,16 @@ import { GetDataService } from '../../common/services/get-data.service';
     styleUrls  : ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-links = NAV_LINKS;
-    constructor(private getDataService: GetDataService) { }
+    links = NAV_LINKS;
+
+    constructor(private getDataService: GetDataService,
+                private translate: TranslateService) { }
 
     ngOnInit() {
     }
 
-    useLanguage(lang){
+    useLanguage(lang) {
         this.getDataService.getTranslateLang(lang);
+        this.translate.use(this.getDataService.getLang());
     }
-
 }

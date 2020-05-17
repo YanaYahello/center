@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { GetDataService } from './common/services/get-data.service';
+import { GetDataService } from '@services/get-data.service';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
@@ -11,29 +11,31 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
     show = false;
-    backgroundClass;
+    backgroundImg;
 
     constructor(private translate: TranslateService,
-                private getDataService: GetDataService,
                 private router: Router) {
+        translate.addLangs(['ua', 'ru']);
         translate.setDefaultLang('ru');
+        const browserLang = translate.getBrowserLang();
+        translate.use(browserLang.match(/ua|ru/) ? browserLang : 'ru');
     }
 
     ngOnInit() {
-        this.translate.use(this.getDataService.sendData());
         this.router.events
             .pipe(filter(event => event instanceof NavigationEnd))
             .subscribe((nav: NavigationEnd) => {
                 switch (nav.url) {
                     case '/':
-                        this.backgroundClass = 'home-page';
+                        this.backgroundImg = 'home-background-img';
                         break;
                     case '/our-team':
-                        this.backgroundClass = 'our-team';
+                        this.backgroundImg = 'our-team-background-img';
                         break;
                     default:
-                        this.backgroundClass = '';
+                        this.backgroundImg = '';
                 }
+                window.scrollTo(0, 0);
             });
     }
 }

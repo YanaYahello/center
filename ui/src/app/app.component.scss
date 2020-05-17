@@ -1,8 +1,11 @@
+@import '~assets/styles/utils/_variables';
 
-.home-page {
- background: url("../assets/images/home-page.png") no-repeat fixed center;
+.home-background-img {
+    background: url("~assets/images/home-page.png") no-repeat top left;
+    background-size: 100%;
 }
 
-.our-team {
- background: url("../assets/images/our-team.png") no-repeat fixed center;
+.our-team-background-img {
+    background: url("~assets/images/our-team.png") no-repeat top left;
+    background-size: 100%;
 }

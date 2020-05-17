@@ -3,73 +3,76 @@
     <form class="contact-us-form" [formGroup]="contactUsForm" (ngSubmit)="onSubmit()">
         <mat-form-field>
             <label>
-                <input matInput placeholder="Имя" formControlName="firstName">
+                <input matInput placeholder="{{'FORM.FIRST' | translate}}" formControlName="firstName">
             </label>
-            <mat-error *ngIf="contactUsForm.controls.firstName?.errors && (contactUsForm.controls.firstName?.dirty ||
-        contactUsForm.controls.firstName?.touched)">
-                <mat-error *ngIf="contactUsForm.controls.firstName.hasError('required')">
-                    Имя обязательно!
+            <mat-error
+                *ngIf="contactUsForm.controls.firstName.invalid && (contactUsForm.controls.firstName.touched || contactUsForm.controls.firstName.dirty)">
+                <mat-error *ngIf="contactUsForm.controls.firstName.errors.required">
+                    {{'ERROR_MSG.REQUIRED'| translate}}
                 </mat-error>
-                <mat-error *ngIf="contactUsForm.controls.firstName.hasError('minlength')">
-                    Имя дожно состоять не менее чем из 2-х символов!
+                <mat-error *ngIf="contactUsForm.controls.firstName.errors.minlength">
+                    {{minlength}}
                 </mat-error>
-                <mat-error *ngIf="contactUsForm.controls.firstName.hasError('maxlength') ">
-                    Имя дожно состоять не более чем из 15-ти символов!
+                <mat-error *ngIf="contactUsForm.controls.firstName.errors.maxlength">
+                    {{maxlength}}
                 </mat-error>
             </mat-error>
         </mat-form-field>
         <mat-form-field>
             <label>
-                <input matInput placeholder="Фамилия" formControlName="lastName">
+                <input matInput placeholder="{{'FORM.LAST' | translate}}" formControlName="lastName">
             </label>
-            <mat-error *ngIf="contactUsForm.controls.lastName.invalid && (contactUsForm.controls.lastName.dirty ||
-        contactUsForm.controls.lastName.touched)">
-                <mat-error *ngIf="contactUsForm.controls.lastName.hasError('required')">
-                    Фамилия обязательна!
+            <mat-error
+                *ngIf="contactUsForm.controls.lastName.invalid && (contactUsForm.controls.lastName.touched || contactUsForm.controls.lastName.dirty)">
+                <mat-error *ngIf="contactUsForm.controls.lastName.errors.required">
+                    {{'ERROR_MSG.REQUIRED'| translate}}
                 </mat-error>
-                <mat-error *ngIf="contactUsForm.controls.lastName.hasError('minlength') ">
-                    Фамилия дожна состоять не менее чем из 2-х символов!
+                <mat-error *ngIf="contactUsForm.controls.lastName.errors.minlength">
+                    {{'ERROR_MSG.MIN_LENGTH'| translate}}
                 </mat-error>
-                <mat-error *ngIf="contactUsForm.controls.lastName.hasError('maxlength') ">
-                    Фамилия дожна состоять не более чем из 15-ти символов!
+                <mat-error *ngIf="contactUsForm.controls.lastName.errors.maxlength">
+                    {{'ERROR_MSG.MAX_LENGTH'| translate}}
                 </mat-error>
             </mat-error>
         </mat-form-field>
         <mat-form-field>
             <label>
-                <input matInput placeholder="Email" formControlName="email">
+                <input matInput placeholder="{{'FORM.EMAIL' | translate}}" formControlName="email">
             </label>
-            <mat-error *ngIf="contactUsForm.controls.email.invalid && (contactUsForm.controls.email.dirty ||
-        contactUsForm.controls.email.touched)">
-                <mat-error *ngIf="contactUsForm.controls.email.hasError('required')">
-                    Email обязателен!
+            <mat-error
+                *ngIf="contactUsForm.controls.email.invalid && (contactUsForm.controls.email.touched || contactUsForm.controls.email.dirty)">
+                <mat-error *ngIf="contactUsForm.controls.email.errors.required">
+                    {{'ERROR_MSG.REQUIRED'| translate}}
                 </mat-error>
-                <mat-error *ngIf="contactUsForm.controls.email.hasError('email')">
-                    Email должен быть такого формата name@name.com
+                <mat-error *ngIf="contactUsForm.controls.email.errors.minlength">
+                    {{'ERROR_MSG.MIN_LENGTH'| translate}}
                 </mat-error>
-                <mat-error *ngIf="contactUsForm.controls.email.hasError('minlength') ">
-                    Email дожен состоять не менее чем из 2-х символов!
+                <mat-error *ngIf="contactUsForm.controls.email.errors.maxlength">
+                    {{'ERROR_MSG.MAX_LENGTH'| translate}}
                 </mat-error>
-                <mat-error *ngIf="contactUsForm.controls.email.hasError('maxlength') ">
-                    Email дожен состоять не более чем из 15-ти символов!
+                <mat-error *ngIf="contactUsForm.controls.email.errors.email">
+                    {{'ERROR_MSG.EMAIL'| translate}}
                 </mat-error>
             </mat-error>
         </mat-form-field>
         <mat-form-field>
             <label>
-                <textarea matInput placeholder="Ваш вопрос" formControlName="question"></textarea>
+                <textarea matInput placeholder="{{'FORM.QUESTION' | translate}}" formControlName="question"></textarea>
             </label>
-            <mat-error *ngIf="contactUsForm.controls.question.invalid && (contactUsForm.controls.question.dirty ||
-        contactUsForm.controls.question.touched)">
-                <mat-error *ngIf="contactUsForm.controls.question.hasError('required')">
-                    Вопрос обязателен!
+            <mat-error
+                *ngIf="contactUsForm.controls.question.invalid && (contactUsForm.controls.question.touched || contactUsForm.controls.question.dirty)">
+                <mat-error *ngIf="contactUsForm.controls.question.errors.required">
+                    {{'ERROR_MSG.REQUIRED'| translate}}
                 </mat-error>
-                <mat-error *ngIf="contactUsForm.controls.question.hasError('maxlength') ">
-                    Вопрос дожен содержать не более 200 символов!
+                <mat-error *ngIf="contactUsForm.controls.question.errors.minlength">
+                    {{'ERROR_MSG.MIN_LENGTH'| translate}}
+                </mat-error>
+                <mat-error *ngIf="contactUsForm.controls.question.errors.maxlength">
+                    {{'ERROR_MSG.MAX_LENGTH'| translate}}
                 </mat-error>
             </mat-error>
         </mat-form-field>
-        <button [disabled]="contactUsForm.invalid" mat-raised-button>Отправить</button>
+        <button mat-flat-button [disabled]="!contactUsForm.valid">{{'FORM.SEND' | translate}}</button>
     </form>
 =======
 <form class="contact-us-form" [formGroup]="contactUsForm" (ngSubmit)="onSubmit()">

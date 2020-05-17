@@ -7,7 +7,8 @@ import { NAV_LINKS } from '../../common/constants/nav-links';
     styleUrls  : ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-links = NAV_LINKS;
+    links = NAV_LINKS;
+
     constructor() { }
 
     ngOnInit() {

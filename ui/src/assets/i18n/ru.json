@@ -1,0 +1,32 @@
+{
+  "HOME": {
+    "TITLE": "Наша клиника",
+    "TEXT": "TEXT IN RUSSIAN"
+  },
+  "LINKS": {
+    "ABOUT_US": "something about us",
+    "OUR_TEAM": "something about our team"
+  },
+  "FORM": {
+    "FIRST": "Имя",
+    "LAST": "Фамилия",
+    "EMAIL": "Електронный адрес",
+    "QUESTION": "Вопрос",
+    "SEND": "Отправить",
+    "PASSWORD": "Введите пароль",
+    "CONFIRM_PASSWORD": "Подтвердите пароль"
+  },
+  "ERROR_MSG": {
+    "REQUIRED": "Это поле обязательно для заполнения",
+    "MIN_LENGTH": "Это поле должно содержать не менее 2 символов!",
+    "MAX_LENGTH": "Это поле должно содержать не более 15 символов!",
+    "EMAIL": "Фомат адреса email@email.com",
+    "QUESTION": "Это поле должно быть заполнено в формате: somename@somename.com",
+    "CONFIRM": "Пароли не вовпадают!"
+  },
+  "WE": {
+    "FIRST": "Индивидуальный подход",
+    "SECOND": "Опытные специалисты",
+    "THIRD": "Современная диагностика"
+  }
+}
