@@ -1,1 +1,4 @@
-<p>message works!</p>
+<div *ngFor="let alert of alerts" class="{{ cssClass(alert) }}">
+    {{'MESSAGE' + alert.message | translate}}
+    <a class="close" (click)="removeAlert(alert)">&times;</a>
+</div>

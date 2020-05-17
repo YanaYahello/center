@@ -38,16 +38,25 @@ async function sendmail(user, callback) {
         }
     });
 
-    let mailOptions = {
-        from   : `email: ${user.email}`,
-        to     : `${user.email}`,
-        subject: 'letter form client',
-        text: user.question,
-        html   : '<b>CENTER</b>' +
+    let html;
+    if (user.hasOwnProperty('phone')) {
+        html = '<b>CENTER</b>' +
+            `<p>Имя: ${user.firstName}</p>
+             <p>Номер телефона: ${user.phone}</p>`;
+    } else {
+        html = '<b>CENTER</b>' +
             `<p>Имя: ${user.firstName}</p>
              <p>Фамилия: ${user.lastName}</p>
              <p>Email: ${user.email}</p>
-             <p>Question: ${user.question}</p>`
+             <p>Question: ${user.question}</p>`;
+    }
+
+    let mailOptions = {
+        from   : `email: ${user.email}`,
+        to     : `yana.yahello@inventorsoft.co`,
+        subject: 'letter form client',
+        text   : user.question,
+        html   : html
     };
 
     let info = await transporter.sendMail(mailOptions);

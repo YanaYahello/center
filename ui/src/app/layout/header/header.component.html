@@ -1,22 +1,32 @@
-<div class="header container-fluid">
-    <div class="container">
-    <div class="row">
-        <div class="logo col-lg-2 col-sm-12">
-<<<<<<< HEAD
-<!--            <img src="../../../assets/images/logo.png" alt="logo">-->
-            <a routerLink="">OOO &laquo;МЕД-КОР&raquo;</a>
-=======
-            <img src="../../../assets/images/logo.png" alt="logo">
-           OOO &laquo;МЕД-КОР&raquo;
->>>>>>> created form added google cart
+<div class="header container-fluid p-0">
+    <div class="container-fluid upper-header">
+        <div class="container">
+            {{'CONTACTS.PHONES' | translate}} :
+            <a href="tel:+380487700448">+380487700448</a>
+            <a href="tel:+380949954448">+380949954448</a>
+            <a href="tel:+380689380492">+380689380492</a>
         </div>
-        <div class="col-lg-2 col-sm-12">
-            <button mat-mini-fab (click)="useLanguage('ru')">RU</button>
-            <button mat-mini-fab (click)="useLanguage('ua')">UA</button>
-        </div>
-        <ul class="col-lg-8 col-sm-12">
-            <li *ngFor="let link of links" [routerLink]="link.path"><a>{{link.name}}</a></li>
-        </ul>
     </div>
+    <div class="container-fluid nav-header">
+        <div class="container">
+            <div class="row">
+                <div class="logo col-lg-3 col-sm-2">
+                    <a routerLink="">
+                        <img src="../../../assets/images/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-3">
+                    <button mat-mini-fab (click)="useLanguage('ru')">RU</button>
+                    <button mat-mini-fab (click)="useLanguage('ua')">UA</button>
+                </div>
+                <div class="nav col-lg-5 col-sm-12">
+                    <label for="toggle">&#9776;</label>
+                    <input type="checkbox" id="toggle">
+                    <ul class="menu">
+                        <li *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active-link"><a>{{'LINKS'+ link.name | translate}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

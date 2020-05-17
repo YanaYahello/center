@@ -1,6 +1,6 @@
-<div [ngClass]="backgroundImg">
 <app-header></app-header>
+<app-message></app-message>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
-<app-message *ngIf="show"></app-message>
-</div>
+<app-phone (click)="toggleFormForCall($event)" [isOpen]="isOpen"></app-phone>
+<app-arrow (click)="goToTop()" *ngIf="isShowArrow"></app-arrow>

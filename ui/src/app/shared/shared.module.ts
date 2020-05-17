@@ -5,26 +5,37 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { PhoneComponent } from './components/phone/phone.component';
+import { ContactUsFormComponent } from '@app/shared/components/contact-us-form/contact-us-form.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { ArrowComponent } from './components/arrow/arrow.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
-    declarations: [MessageComponent],
-    exports     : [
+    declarations: [MessageComponent, PhoneComponent, ContactUsFormComponent, CarouselComponent, ArrowComponent],
+    exports: [
         MessageComponent,
         MatButtonModule,
         MatInputModule,
         ReactiveFormsModule,
-        MatDialogModule
+        PhoneComponent,
+        CarouselComponent,
+        ArrowComponent,
+        ContactUsFormComponent,
+        MatDialogModule,
+        NgxPaginationModule
     ],
-    imports: [
+    imports     : [
         CommonModule,
         MatButtonModule,
         MatInputModule,
         ReactiveFormsModule,
         TranslateModule,
         MatDialogModule,
-        MatIconModule
+        MatIconModule,
+        NgxPaginationModule
     ]
 })
 export class SharedModule {

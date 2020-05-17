@@ -1,5 +1,5 @@
 <div class="form-wrapper">
-<<<<<<< HEAD
+    <div *ngIf="callForm" (click)="closedForm($event)"><img src="../../../../assets/images/icons/cross.png" alt="cross"></div>
     <form class="contact-us-form" [formGroup]="contactUsForm" (ngSubmit)="onSubmit()">
         <mat-form-field>
             <label>
@@ -11,14 +11,14 @@
                     {{'ERROR_MSG.REQUIRED'| translate}}
                 </mat-error>
                 <mat-error *ngIf="contactUsForm.controls.firstName.errors.minlength">
-                    {{minlength}}
+                    {{'ERROR_MSG.MIN_LENGTH'| translate}}
                 </mat-error>
                 <mat-error *ngIf="contactUsForm.controls.firstName.errors.maxlength">
-                    {{maxlength}}
+                    {{'ERROR_MSG.MAX_LENGTH'| translate}}
                 </mat-error>
             </mat-error>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field *ngIf="!callForm">
             <label>
                 <input matInput placeholder="{{'FORM.LAST' | translate}}" formControlName="lastName">
             </label>
@@ -35,7 +35,7 @@
                 </mat-error>
             </mat-error>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field *ngIf="!callForm">
             <label>
                 <input matInput placeholder="{{'FORM.EMAIL' | translate}}" formControlName="email">
             </label>
@@ -55,7 +55,24 @@
                 </mat-error>
             </mat-error>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field *ngIf="callForm">
+            <label>
+                <input matInput placeholder="{{'FORM.PHONE' | translate}}" formControlName="phone">
+            </label>
+            <mat-error
+                *ngIf="contactUsForm.controls.phone.invalid && (contactUsForm.controls.phone.touched || contactUsForm.controls.phone.dirty)">
+                <mat-error *ngIf="contactUsForm.controls.phone.errors.required">
+                    {{'ERROR_MSG.REQUIRED'| translate}}
+                </mat-error>
+                <mat-error *ngIf="contactUsForm.controls.phone.errors.minlength">
+                    {{'ERROR_MSG.MIN_LENGTH'| translate}}
+                </mat-error>
+                <mat-error *ngIf="contactUsForm.controls.phone.errors.maxlength">
+                    {{'ERROR_MSG.MAX_LENGTH'| translate}}
+                </mat-error>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field *ngIf="!callForm">
             <label>
                 <textarea matInput placeholder="{{'FORM.QUESTION' | translate}}" formControlName="question"></textarea>
             </label>
@@ -72,45 +89,6 @@
                 </mat-error>
             </mat-error>
         </mat-form-field>
-        <button mat-flat-button [disabled]="!contactUsForm.valid">{{'FORM.SEND' | translate}}</button>
+        <button mat-flat-button #submitBtn [disabled]="!contactUsForm.valid">{{'FORM.SEND' | translate}}</button>
     </form>
-=======
-<form class="contact-us-form" [formGroup]="contactUsForm" (ngSubmit)="onSubmit()">
-    <mat-form-field>
-        <label>
-            <input matInput placeholder="Имя" formControlName="firstName">
-        </label>
-        <mat-error>
-                Пожалуйста введите свое имя.
-            </mat-error>
-            <mat-error *ngIf="contactUsForm.hasError('required')">
-                 Имя <strong>обязательно</strong>
-            </mat-error>
-    </mat-form-field>
-    <mat-form-field>
-        <label>
-            <input matInput placeholder="Фамилия" formControlName="lastName">
-        </label>
-        <mat-error>
-                Пожалуйста введите свою фамилию.
-            </mat-error>
-    </mat-form-field>
-    <mat-form-field>
-        <label>
-            <input matInput placeholder="Email" formControlName="email">
-        </label>
-        <mat-error>
-                 Это поле обязательно для заполнения!
-            </mat-error>
-    </mat-form-field>
-    <mat-form-field>
-        <label>
-            <textarea matInput placeholder="Ваш вопрос" formControlName="question"></textarea>
-        </label>
-        <mat-error>
-                Это поле обязательно для заполнения!
-            </mat-error>
-    </mat-form-field>
-</form>
->>>>>>> created form added google cart
 </div>

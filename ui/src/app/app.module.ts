@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ContactUsFormComponent } from './shared/components/contact-us-form/contact-us-form.component';
-import { QuestionFormComponent } from './shared/components/question-form/question-form.component';
 import { SharedModule } from './shared/shared.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -19,8 +17,6 @@ import { MainPageComponent } from './main-page/main-page.component';
         AppComponent,
         HeaderComponent,
         FooterComponent,
-        ContactUsFormComponent,
-        QuestionFormComponent,
         MainPageComponent
     ],
     imports     : [

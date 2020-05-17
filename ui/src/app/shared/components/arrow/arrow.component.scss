@@ -1,0 +1,18 @@
+@import "../../../../assets/styles/utils/variables";
+
+.arrow {
+    height: 40px;
+    width: 40px;
+    background-color: $primary;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    border: 4px solid $dark-gray;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 500px) {
+    .arrow {
+        right: 5px;
+    }
+}

@@ -1,16 +1,22 @@
 @import '~assets/styles/utils/variables';
 
 .footer {
-<<<<<<< HEAD
-=======
-    background-color: $light;
->>>>>>> created form added google cart
     text-align: center;
     padding: 30px;
+    background-color: $black;
 }
 
 ul {
     color: $primary;
+    display: flex;
+    justify-content: center;
+
+    li {
+        color: $gray;
+        font-weight: bold;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
 
     li:hover {
         cursor: pointer;
@@ -20,9 +26,30 @@ ul {
 .contacts {
     display: flex;
     flex-direction: column;
+    color: $gray;
+
+    .social {
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        height: 30px;
+        margin-right: 5px;
+    }
 
     a {
-        color: $primary;
+        color: $gray;
         text-decoration: none;
+        margin-bottom: 10px;
+        display: block;
     }
+
+    div {
+        margin-bottom: 10px;
+    }
+}
+
+.active-link {
+    color: $error;
 }

@@ -11,6 +11,10 @@ body {
     font-family: 'Fira Sans', sans-serif;
 }
 
-button:focus, li:focus {
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+li:focus {
     outline: none;
 }

@@ -1,0 +1,25 @@
+@import '~assets/styles/utils/_variables';
+
+.notification {
+    min-width: 200px;
+    min-height: 20px;
+    padding: 10px 30px;
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    border-radius: 10px;
+}
+
+.notification-success {
+    background-color: $success;
+}
+
+.notification-error {
+    background-color: $error;
+}
+
+.close {
+    position: relative;
+    right: -40px;
+    top: 0;
+}

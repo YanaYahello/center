@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NAV_LINKS } from '../../common/constants/nav-links';
+import { NAV_LINKS } from '@app/common/constants/nav-links';
 
 @Component({
     selector   : 'app-footer',
@@ -13,5 +13,4 @@ export class FooterComponent implements OnInit {
 
     ngOnInit() {
     }
-
 }
